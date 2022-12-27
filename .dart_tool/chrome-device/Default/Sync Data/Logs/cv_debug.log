@@ -1,0 +1,25 @@
+{"logTime": "1216/211526", "correlationVector":"vglU/gJ3xfkhfJPkclL+fv.0","action":"FeedSettingFetch_homeCloud", "result":"0", "context":{}}
+{"logTime": "1216/211526", "correlationVector":"y1XYwtdJU3yhDwasN3W6tX.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_WestEurope_000l", "server":"general0100000G"}}
+{"logTime": "1216/211526", "correlationVector":"y1XYwtdJU3yhDwasN3W6tX","action":"Initial GetUpdates", "result":"", "context":Reason: NEW_CLIENT. cV=y1XYwtdJU3yhDwasN3W6tX}
+{"logTime": "1216/211526", "correlationVector":"y1XYwtdJU3yhDwasN3W6tX.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 1 update(s). cV=y1XYwtdJU3yhDwasN3W6tX.0;server=general0100000G;cloudType=Consumer;environment=Prod_WestEurope_000l}
+{"logTime": "1216/211527", "correlationVector":"tT0lGrg8G4ezUnoc4t2pMx","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"", "server":""}}
+{"logTime": "1216/211527", "correlationVector":"BdNddRgF4I/5EI6cuE93o/","action":"Initial GetUpdates", "result":"", "context":Reason: NEW_CLIENT. cV=BdNddRgF4I/5EI6cuE93o/}
+{"logTime": "1216/211527", "correlationVector":"BdNddRgF4I/5EI6cuE93o/.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_WestEurope_000l", "server":"general0100000D"}}
+{"logTime": "1216/211527", "correlationVector":"BdNddRgF4I/5EI6cuE93o/.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 45 update(s). cV=BdNddRgF4I/5EI6cuE93o/.0;server=general0100000D;cloudType=Consumer;environment=Prod_WestEurope_000l}
+{"logTime": "1216/211528", "correlationVector":"Mj8RhBkn/3wElMZBK6Qipx","action":"Normal GetUpdate request", "result":"", "context":cV=Mj8RhBkn/3wElMZBK6Qipx
+Nudged types: Device Info, User Consents
+Refresh requested types: Device Info, User Consents, Send Tab To Self, Encryption Keys}
+{"logTime": "1216/211528", "correlationVector":"Mj8RhBkn/3wElMZBK6Qipx.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_WestEurope_000l", "server":"general0100001G"}}
+{"logTime": "1216/211528", "correlationVector":"Mj8RhBkn/3wElMZBK6Qipx.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 0 update(s). cV=Mj8RhBkn/3wElMZBK6Qipx.0;server=general0100001G;cloudType=Consumer;environment=Prod_WestEurope_000l}
+{"logTime": "1216/211528", "correlationVector":"Poal8YxPlUSvNefRg3k0dd","action":"Commit Request", "result":"", "context":Item count: 1
+Contributing types: Device Info}
+{"logTime": "1216/211528", "correlationVector":"Poal8YxPlUSvNefRg3k0dd.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_WestEurope_000l", "server":"general0100000H"}}
+{"logTime": "1216/211528", "correlationVector":"Poal8YxPlUSvNefRg3k0dd.2","action":"Commit Response", "result":"SYNCER_OK", "context":Result: SYNCER_OK. cV=Poal8YxPlUSvNefRg3k0dd.0;server=general0100000H;cloudType=Consumer;environment=Prod_WestEurope_000l}
+{"logTime": "1216/211528", "correlationVector":"jY4+c6IZuQL+2VHPgQq6A4","action":"Commit Request", "result":"", "context":Item count: 1
+Contributing types: User Consents}
+{"logTime": "1216/211529", "correlationVector":"jY4+c6IZuQL+2VHPgQq6A4.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_WestEurope_000l", "server":"general0100001H"}}
+{"logTime": "1216/211529", "correlationVector":"jY4+c6IZuQL+2VHPgQq6A4.2","action":"Commit Response", "result":"SYNCER_OK", "context":Result: SYNCER_OK. cV=jY4+c6IZuQL+2VHPgQq6A4.0;server=general0100001H;cloudType=Consumer;environment=Prod_WestEurope_000l}
+{"logTime": "1216/211529", "correlationVector":"Iyg7zPrdNfDRLtkQxK6idb","action":"Normal GetUpdate request", "result":"", "context":cV=Iyg7zPrdNfDRLtkQxK6idb
+Nudged types: Device Info}
+{"logTime": "1216/211529", "correlationVector":"Iyg7zPrdNfDRLtkQxK6idb.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_WestEurope_000l", "server":"general0100001N"}}
+{"logTime": "1216/211529", "correlationVector":"Iyg7zPrdNfDRLtkQxK6idb.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 1 update(s). cV=Iyg7zPrdNfDRLtkQxK6idb.0;server=general0100001N;cloudType=Consumer;environment=Prod_WestEurope_000l}
