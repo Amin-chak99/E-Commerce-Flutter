@@ -4,6 +4,9 @@ import 'package:eshop/screen/cartPage.dart';
 import 'package:eshop/screen/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'Binding/Product_binding.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,15 +30,19 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
 
   final routers = {
-    '/home': (context) => home(),
+    '/home': (context) => HomePage(),
     '/Fournisseur': (context) => FournisseurPage(),
     '/EspaceFr': (context) => EspaceFr(),
   };
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false, routes: routers, home: home());
+    return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: routers,
+        home: HomePage(),
+      initialBinding: ControllerBinding(),
+        );
   }
 
   @override

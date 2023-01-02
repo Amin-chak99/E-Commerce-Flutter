@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\WorkSpace_Flutter\\e_commerce\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
+            "outputFile": "E:\\WorkSpace_Flutter\\E-Commerce-Flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\38e30c664341fe5bfcc1d9de04582443\\transformed\\browser-1.4.0\\res\\values-bs\\values-bs.xml",

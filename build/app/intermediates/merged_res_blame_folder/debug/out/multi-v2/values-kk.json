@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\WorkSpace_Flutter\\e_commerce\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
+            "outputFile": "E:\\WorkSpace_Flutter\\E-Commerce-Flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\0ce731f8c62e88af9af421907435d7da\\transformed\\core-1.8.0\\res\\values-kk\\values-kk.xml",

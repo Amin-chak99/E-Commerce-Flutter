@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\WorkSpace_Flutter\\e_commerce\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\WorkSpace_Flutter\\E-Commerce-Flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\3ee0f8915dc9bf42c60f3eef0b7bd28a\\transformed\\jetified-play-services-basement-18.1.0\\res\\values\\values.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "E:\\WorkSpace_Flutter\\e_commerce\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "source": "E:\\WorkSpace_Flutter\\E-Commerce-Flutter\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -35,6 +35,25 @@
                         "startOffsets": "9016,9375,9457,9561,9670,9790,9885",
                         "endColumns": "143,81,103,108,119,94,71",
                         "endOffsets": "9155,9452,9556,9665,9785,9880,9952"
+                    }
+                },
+                {
+                    "source": "E:\\WorkSpace_Flutter\\E-Commerce-Flutter\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "138,143",
+                        "startColumns": "4,4",
+                        "startOffsets": "10028,10336",
+                        "endLines": "142,145",
+                        "endColumns": "12,12",
+                        "endOffsets": "10331,10500"
                     }
                 },
                 {
@@ -107,25 +126,6 @@
                         "endLines": "7,8,9,10,86,166,170,322,339,347",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "339,399,451,496,5500,11815,12012,17233,18347,18740"
-                    }
-                },
-                {
-                    "source": "E:\\WorkSpace_Flutter\\e_commerce\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "138,143",
-                        "startColumns": "4,4",
-                        "startOffsets": "10028,10336",
-                        "endLines": "142,145",
-                        "endColumns": "12,12",
-                        "endOffsets": "10331,10500"
                     }
                 },
                 {
