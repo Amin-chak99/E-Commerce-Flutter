@@ -1,9 +1,10 @@
+import 'package:eshop/Controller/Cart_Controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Controller/Product_Controller.dart';
 
-Widget CardView(BuildContext context, int index , ProductController controller)=>
+Widget CardView(BuildContext context, int index , ProductController controller, CartController cartController)=>
     Card(
         child: Container(
           margin: EdgeInsets.only(top: 10,left: 10,right: 10 ,bottom: 10),
@@ -51,6 +52,7 @@ Widget CardView(BuildContext context, int index , ProductController controller)=
                               color: Colors.grey),
                           borderRadius: BorderRadius.circular(5),),
                         child: IconButton(onPressed: () async {
+                          cartController.AddProducts(controller.employees[index]);
 
                         }, icon: Icon(Icons.shopping_cart_outlined ),),),
                       Container(

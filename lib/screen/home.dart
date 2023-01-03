@@ -3,11 +3,13 @@ import 'package:eshop/Controller/Categories_Controller.dart';
 import 'package:eshop/screen/FournisseurPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../Controller/Cart_Controller.dart';
 import '../Controller/Product_Controller.dart';
 import '../Model/Product_Model.dart';
 import '../View/Card_View.dart';
 import 'cartPage.dart';
 class HomePage extends GetView<ProductController> {
+  final cartController = Get.put(CartController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -178,7 +180,7 @@ class HomePage extends GetView<ProductController> {
                               itemCount: controller.employees.length,
                               itemBuilder: (context ,index) =>
 
-                                  CardView(context ,index , controller)
+                                  CardView(context ,index , controller , cartController)
                           ),
                         );
                       }else{
