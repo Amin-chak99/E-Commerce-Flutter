@@ -34,8 +34,8 @@
 24    </queries>
 25
 26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-26-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\USER\.gradle\caches\transforms-3\0548e507d3019ac84ce4969b57803f45\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
-26-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\USER\.gradle\caches\transforms-3\0548e507d3019ac84ce4969b57803f45\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:24:22-76
+26-->[:connectivity_plus] E:\WorkSpace_Flutter\E-Commerce-Flutter\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
+26-->[:connectivity_plus] E:\WorkSpace_Flutter\E-Commerce-Flutter\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-76
 27    <uses-permission android:name="android.permission.WAKE_LOCK" />
 27-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\USER\.gradle\caches\transforms-3\bfd20290ff5d39e38453adc1ae5698f7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:5-68
 27-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\USER\.gradle\caches\transforms-3\bfd20290ff5d39e38453adc1ae5698f7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:22-65

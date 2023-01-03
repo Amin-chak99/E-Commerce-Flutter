@@ -158,6 +158,8 @@ class HomePage extends GetView<ProductController> {
                     ),
                   );
                    }),
+
+
             GetBuilder<ProductController>(
                 init: ProductController(),
                 builder: (value){
@@ -165,7 +167,8 @@ class HomePage extends GetView<ProductController> {
                     stream: value.getAllEmployees(),
                     builder: (context,snapshot){
                       if(snapshot.hasError){
-                        return Text('error ${snapshot.error}');}
+
+                        return Text('error');}
                       else if (snapshot.hasData){
                         print(' data exist');
                         return Container(

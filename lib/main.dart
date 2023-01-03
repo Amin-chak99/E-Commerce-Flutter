@@ -1,5 +1,9 @@
+import 'dart:io';
+
+import 'package:eshop/View/Carousel_Loading.dart';
 import 'package:eshop/screen/EspaceFr.dart';
 import 'package:eshop/screen/FournisseurPage.dart';
+import 'package:eshop/screen/Splach_Screen.dart';
 import 'package:eshop/screen/cartPage.dart';
 import 'package:eshop/screen/home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,13 +13,19 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'Binding/Product_binding.dart';
 
 Future<void> main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  try {
+    Firebase.initializeApp();
+  }catch(_){
+    CarouselLoading();
+  }
   //options: DefaultFirebaseOptions.currentPlatform;
 
   // await _onGetMode().then((value){
   //  GlobalParams.themeActuel.setMode(value);
   runApp(MyApp());
+
   // });
 }
 
@@ -40,7 +50,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         routes: routers,
-        home: HomePage(),
+        home: SplashScreen(),
       initialBinding: ControllerBinding(),
         );
   }
@@ -48,6 +58,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+
+
     setState(() {});
   }
 }

@@ -7,6 +7,7 @@ import '../Model/Product_Model.dart';
 
 
 class ProductController extends GetxController {
+  static ProductController instance = Get.find();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   late TextEditingController nameController, addressController;
 

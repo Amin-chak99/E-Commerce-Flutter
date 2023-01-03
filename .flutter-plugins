@@ -1,6 +1,11 @@
 # This is a generated file; do not edit or check into version control.
 cloud_firestore=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-4.3.1\\
 cloud_firestore_web=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore_web-3.2.1\\
+connectivity_plus=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\connectivity_plus-2.3.0\\
+connectivity_plus_linux=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\connectivity_plus_linux-1.3.1\\
+connectivity_plus_macos=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\connectivity_plus_macos-1.2.6\\
+connectivity_plus_web=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\connectivity_plus_web-1.2.5\\
+connectivity_plus_windows=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\connectivity_plus_windows-1.2.2\\
 file_picker=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\file_picker-5.2.4\\
 firebase_auth=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-4.2.4\\
 firebase_auth_web=E:\\aminc\\telechargemants\\flutter\\flutter_windows_3.3.2-stableflutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth_web-5.2.4\\
