@@ -1,6 +1,4 @@
-import 'dart:io';
-
-import 'package:eshop/View/Carousel_Loading.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:eshop/screen/EspaceFr.dart';
 import 'package:eshop/screen/FournisseurPage.dart';
 import 'package:eshop/screen/Splach_Screen.dart';
@@ -15,11 +13,7 @@ import 'Binding/Product_binding.dart';
 Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
-  try {
-    Firebase.initializeApp();
-  }catch(_){
-    CarouselLoading();
-  }
+  await Firebase.initializeApp();
   //options: DefaultFirebaseOptions.currentPlatform;
 
   // await _onGetMode().then((value){
@@ -59,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
-
     setState(() {});
   }
+
 }
