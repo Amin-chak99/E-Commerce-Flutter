@@ -1,7 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../screen/addproduce.dart';
-
 class ProductModel{
   String? imagename;
   String? prix;
