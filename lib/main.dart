@@ -46,6 +46,7 @@ class _MyAppState extends State<MyApp> {
         routes: routers,
         home: SplashScreen(),
       initialBinding: ControllerBinding(),
+      
         );
   }
 

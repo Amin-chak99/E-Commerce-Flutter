@@ -15,19 +15,13 @@ class HomeScreen extends StatelessWidget {
         init: NetworkController(),
         builder: (value){
 
-           return Column(
-             children: [
-               Container(
-                 child: value.Conctivite == 'none'
+           return  Container(
 
-                     ? Text(value.Conctivite )
-                     : Text(value.Conctivite ),
-               ),
+             child: value.Conctivite == 'none'
 
-             ],
-
-
-          );
+                 ? CarouselLoading()
+                 : HomePage(),
+           );
         });
   }
 }
