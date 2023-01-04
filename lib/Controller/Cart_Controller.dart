@@ -1,23 +1,54 @@
- import 'package:get/get.dart';
+import 'package:eshop/Controller/Product_Controller.dart';
+import 'package:get/get.dart';
 
 import '../Model/Product_Model.dart';
 
 class CartController extends GetxController {
+  static CartController instance = Get.find();
 
-  var _product= {}.obs ;
+  late String x="0";
+  var listproduct= {}.obs ;
 
   void AddProducts(ProductModel product) {
-    if (_product.containsKey(product)){
-      _product[product] +=1 ;
+    if (listproduct.containsKey(product)){
+      listproduct[product] +=1 ;
     }else{
-      _product[product] =1;
+      listproduct[product] =1;
     }
     Get.snackbar("Produit Ajoutée", "vous avez ajoutez le produit de marque ${product.marque} au panier",
-    snackPosition: SnackPosition.BOTTOM,
-      duration: Duration(seconds: 2)
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: 2)
     );
 
+
   }
-  get products => _product ;
+  RxMap get  data => listproduct ;
+
+  void removeProduct(ProductModel product) {
+    if (listproduct.containsKey(product) &&listproduct [product] == 1) {
+      listproduct.removeWhere((key, value) => key == product);
+    } else {
+      listproduct [product] -= 1;
+    }
+  }
+  void removeAllProduct(ProductModel product) {
+    listproduct.removeWhere((key, value) => key == product);
+
+  }
+  void lengthData(){
+    x = data.length.toString();
+    print("print:$x");
+    update();
+
+  }
+  get productSubtotal => listproduct.entries
+      .map((product) => product.key.prix * product.value)
+      .toList();
+  get total => listproduct.entries
+      .map((product) => product.key.prix * product.value)
+      .toList()
+      .reduce((value, element) => value + element)
+      .toString();
+
 
 }

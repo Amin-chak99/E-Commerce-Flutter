@@ -31,18 +31,18 @@ class CartPage extends StatelessWidget {
 
         ],
       ),
-      body: Container(
-        child: ListView.builder(
-          itemCount: controller.products.length,
-            itemBuilder:(BuildContext context ,int index) {
-            return CardProductCard(
-              controller: controller,
-              product: controller.products.key.toList()[index],
-              qte: controller.products.value.toList()[index],
-              index: index,);
-            }
-            ),
-      ),
+      body:   Obx(
+        () => ListView.builder(
+        itemCount: controller.data.length,
+        itemBuilder:(BuildContext context ,int index) {
+          return CardProductCard(
+            controller: controller,
+            product: controller.data.keys.toList()[index],
+            qte: controller.data.values.toList()[index],
+            index: index,);
+        }
+    ),
+    ),
     );
   }
 }
@@ -64,9 +64,84 @@ class CardProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric (vertical: 10,horizontal: 15),
+      padding: EdgeInsets.symmetric ( vertical: 10, horizontal: 15),
+      decoration: BoxDecoration(
+        color:  Colors.white,
+        border: Border.all(
+            width: 0.2,
+            color: Colors.grey
+        ),
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            spreadRadius: 1.2,
+            blurRadius: 2,
+            offset: Offset(0, 5), // changes position of shadow
+          ),
+        ],
+      ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(child: Image.network(product.imagename.toString()),)
+          Container(
+            width: 100,
+            height: 100,
+            child: Image.network(product.imagename.toString()),),
+
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(product.categories.toString() , style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 18
+                  ),),
+                  IconButton(onPressed: (){
+                    controller.removeAllProduct(product);
+
+                  }, icon: Icon(Icons.delete , color: Colors.red,))
+
+                ],
+              ),
+            SizedBox(height: 5,),
+            Text(product.marque.toString().toUpperCase() , style: TextStyle(
+              color: Colors.orange,
+              fontSize: 20
+            ),),
+              SizedBox(height: 5,),
+              Row(
+
+                children: [
+                  Text(product.prix.toString() , style: TextStyle(
+                      color: Colors.black ,
+                      fontSize: 18
+                  ),),
+
+                    IconButton(
+                    onPressed: () {
+                      controller.removeProduct(product);
+
+                    },
+                    icon: Icon (Icons.remove_circle),
+                    ),
+                    Text('${qte}'),
+                    IconButton(
+                    onPressed: () {
+                      controller.AddProducts(product);
+
+                    },
+                    icon: Icon (Icons.add_circle),
+                    ),
+
+                ],
+              ),
+
+
+          ],)
         ],
       ),
     );

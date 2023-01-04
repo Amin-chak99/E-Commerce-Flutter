@@ -10,6 +10,8 @@ import '../View/Card_View.dart';
 import 'cartPage.dart';
 class HomePage extends GetView<ProductController> {
   final cartController = Get.put(CartController());
+  final categoriesController = Get.put(CategoriesController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,19 +30,23 @@ class HomePage extends GetView<ProductController> {
               Get.to(()=> FournisseurPage());
             },
           ),
-          Container(
-            padding: const EdgeInsets.only(right: 15),
-            child:  Badge(
-              toAnimate: true,
-              position: BadgePosition.topEnd(top: 0),
-              animationType: BadgeAnimationType.slide ,
-              animationDuration:  Duration(milliseconds: 300),
-              badgeContent: Text(""),
-              child: IconButton(onPressed: () {
-                Get.to(()=> CartPage());
-              }, icon: Icon(Icons.shopping_cart_checkout , color: Color.fromRGBO(255, 122, 51, 10),),),
-            ),
-          ),
+          GetBuilder<CartController>(
+              init: CartController(),
+              builder: (value){
+                return   Container(
+                  padding: const EdgeInsets.only(right: 15),
+                  child:  Badge(
+                    toAnimate: true,
+                    position: BadgePosition.topEnd(top: 0),
+                    animationType: BadgeAnimationType.slide ,
+                    animationDuration:  Duration(milliseconds: 300),
+                    badgeContent: Text(value.x),
+                    child: IconButton(onPressed: () {
+                      Get.to(()=> CartPage());
+                    }, icon: Icon(Icons.shopping_cart_checkout , color: Color.fromRGBO(255, 122, 51, 10),),),
+                  ),
+                );
+              }),
         ],
       ),
       body: Container(
@@ -180,7 +186,7 @@ class HomePage extends GetView<ProductController> {
                               itemCount: controller.employees.length,
                               itemBuilder: (context ,index) =>
 
-                                  CardView(context ,index , controller , cartController)
+                                  CardView(context ,index , controller , cartController , categoriesController)
                           ),
                         );
                       }else{
