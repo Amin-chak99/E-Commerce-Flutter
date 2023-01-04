@@ -10,6 +10,8 @@ import '../View/Card_View.dart';
 import 'cartPage.dart';
 class HomePage extends GetView<ProductController> {
   final cartController = Get.put(CartController());
+  final categoriesController = Get.put(CategoriesController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -184,7 +186,7 @@ class HomePage extends GetView<ProductController> {
                               itemCount: controller.employees.length,
                               itemBuilder: (context ,index) =>
 
-                                  CardView(context ,index , controller , cartController)
+                                  CardView(context ,index , controller , cartController , categoriesController)
                           ),
                         );
                       }else{

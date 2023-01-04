@@ -6,7 +6,7 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import '../Controller/Controller.dart';
 import '../Controller/Product_Controller.dart';
 
-Widget CardView(BuildContext context, int index , ProductController controller, CartController cartController)=>
+Widget CardView(BuildContext context, int index , ProductController controller, CartController cartController, categoriesController)=>
     Card(
         child: Container(
           margin: EdgeInsets.only(top: 10,left: 10,right: 10 ,bottom: 10),
@@ -35,8 +35,7 @@ Widget CardView(BuildContext context, int index , ProductController controller, 
                     padding: EdgeInsets.only(top: 5),
                     width: 140,
                     height: 50,
-                    child: controller.employees[index].marque!.contains((controller.employees[index].marque!).toLowerCase())? Image.asset('assets/images/${(controller.employees[index].marque!).toLowerCase()}.png',):null,),
-                  const SizedBox(height: 5.0,),
+                    child: categoriesController.marq.contains((productController.employees[index].marque!).toLowerCase())? Image.asset('assets/images/${(productController.employees[index].marque!).toLowerCase()}.png',):null,),                  const SizedBox(height: 5.0,),
                   Text('${controller.employees[index].prix!} DT TTC',style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
