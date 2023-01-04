@@ -31,18 +31,20 @@ class CartPage extends StatelessWidget {
 
         ],
       ),
-      body:   Obx(
-        () => ListView.builder(
-        itemCount: controller.data.length,
-        itemBuilder:(BuildContext context ,int index) {
-          return CardProductCard(
-            controller: controller,
-            product: controller.data.keys.toList()[index],
-            qte: controller.data.values.toList()[index],
-            index: index,);
-        }
-    ),
-    ),
+      body: Container(
+        child: ListView.builder(
+          itemCount: controller.data.length,
+            itemBuilder:(BuildContext context ,int index) {
+            return CardProductCard(
+              controller: controller,
+
+              product: controller.data.keys.toList()[index],
+              qte: controller.data.values.toList()[index],
+
+              index: index,);
+            }
+            ),
+      ),
     );
   }
 }
@@ -93,20 +95,10 @@ class CardProductCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(product.categories.toString() , style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 18
-                  ),),
-                  IconButton(onPressed: (){
-                    controller.removeAllProduct(product);
-
-                  }, icon: Icon(Icons.delete , color: Colors.red,))
-
-                ],
-              ),
+              Text(product.categories.toString() , style: TextStyle(
+                  color: Colors.grey ,
+                  fontSize: 16
+              ),),
             SizedBox(height: 5,),
             Text(product.marque.toString().toUpperCase() , style: TextStyle(
               color: Colors.orange,
@@ -122,18 +114,12 @@ class CardProductCard extends StatelessWidget {
                   ),),
 
                     IconButton(
-                    onPressed: () {
-                      controller.removeProduct(product);
-
-                    },
+                    onPressed: () {},
                     icon: Icon (Icons.remove_circle),
                     ),
                     Text('${qte}'),
                     IconButton(
-                    onPressed: () {
-                      controller.AddProducts(product);
-
-                    },
+                    onPressed: () {},
                     icon: Icon (Icons.add_circle),
                     ),
 
