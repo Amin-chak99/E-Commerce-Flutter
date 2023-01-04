@@ -1,7 +1,9 @@
 import 'package:eshop/Controller/Cart_Controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 
+import '../Controller/Controller.dart';
 import '../Controller/Product_Controller.dart';
 
 Widget CardView(BuildContext context, int index , ProductController controller, CartController cartController)=>
@@ -42,19 +44,24 @@ Widget CardView(BuildContext context, int index , ProductController controller, 
                   const SizedBox(height: 5.0,),
                   Row(
                     children: [
-                      Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color:  Colors.grey.shade200,
-                          border: Border.all(
-                              width: 0,
-                              color: Colors.grey),
-                          borderRadius: BorderRadius.circular(5),),
-                        child: IconButton(onPressed: () async {
-                          cartController.AddProducts(controller.employees[index]);
+                      GetBuilder<CartController>(
+                          init: CartController(),
+                          builder: (value){
+                            return    Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color:  Colors.grey.shade200,
+                                border: Border.all(
+                                    width: 0,
+                                    color: Colors.grey),
+                                borderRadius: BorderRadius.circular(5),),
+                              child: IconButton(onPressed: () async {
+                                cartController.AddProducts(productController.employees[index]);
+                                value.lengthData();
 
-                        }, icon: Icon(Icons.shopping_cart_outlined ),),),
+                              }, icon: Icon(Icons.shopping_cart_outlined ),),);
+                          }),
                       Container(
                         margin: EdgeInsets.only(left: 5),
                         width: 40,

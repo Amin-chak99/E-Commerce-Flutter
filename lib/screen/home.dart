@@ -28,19 +28,23 @@ class HomePage extends GetView<ProductController> {
               Get.to(()=> FournisseurPage());
             },
           ),
-          Container(
-            padding: const EdgeInsets.only(right: 15),
-            child:  Badge(
-              toAnimate: true,
-              position: BadgePosition.topEnd(top: 0),
-              animationType: BadgeAnimationType.slide ,
-              animationDuration:  Duration(milliseconds: 300),
-              badgeContent: Text(""),
-              child: IconButton(onPressed: () {
-                Get.to(()=> CartPage());
-              }, icon: Icon(Icons.shopping_cart_checkout , color: Color.fromRGBO(255, 122, 51, 10),),),
-            ),
-          ),
+          GetBuilder<CartController>(
+              init: CartController(),
+              builder: (value){
+                return   Container(
+                  padding: const EdgeInsets.only(right: 15),
+                  child:  Badge(
+                    toAnimate: true,
+                    position: BadgePosition.topEnd(top: 0),
+                    animationType: BadgeAnimationType.slide ,
+                    animationDuration:  Duration(milliseconds: 300),
+                    badgeContent: Text(value.x),
+                    child: IconButton(onPressed: () {
+                      Get.to(()=> CartPage());
+                    }, icon: Icon(Icons.shopping_cart_checkout , color: Color.fromRGBO(255, 122, 51, 10),),),
+                  ),
+                );
+              }),
         ],
       ),
       body: Container(
