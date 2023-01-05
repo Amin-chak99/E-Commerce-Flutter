@@ -178,7 +178,6 @@ class HomePage extends GetView<ProductController> {
 
                         return Text('error');}
                       else if (snapshot.hasData){
-                        print(' data exist');
                         return Container(
                           child :ListView.builder(
                               shrinkWrap: true,

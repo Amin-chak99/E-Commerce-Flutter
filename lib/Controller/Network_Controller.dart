@@ -7,6 +7,5 @@ class NetworkController extends GetxController {
     var result = await Connectivity().checkConnectivity();
     Conctivite = result.name ;
     update();
-    print(result.name);
   }
 }

@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
     return  GetBuilder<NetworkController>(
         init: NetworkController(),
         builder: (value){
+          value.checkConnectitivy();
 
            return  Container(
 
