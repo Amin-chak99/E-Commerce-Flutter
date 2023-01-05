@@ -12,26 +12,10 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: const Icon(Icons.sort , color: Color.fromRGBO(255, 122, 51, 10),),
-        title: const Text('AC Market',style: TextStyle(
-          fontSize: 16,
-          color: Color.fromRGBO(255, 122, 51, 10),
-        ),),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.arrow_back ,color: Color.fromRGBO(255, 122, 51, 10),),
-            onPressed: () {
-              Get.to(()=> HomePage());
-            },
-          ),
+    return Container(
+      height: MediaQuery.of(context).size.height*0.75,
 
-        ],
-      ),
-      body:  Obx(
+      child:  Obx(
             () => ListView.builder(
             itemCount: controller.data.length,
             itemBuilder:(BuildContext context ,int index) {
@@ -100,10 +84,16 @@ class CardProductCard extends StatelessWidget {
                       color: Colors.grey,
                       fontSize: 18
                   ),),
-                  IconButton(onPressed: (){
-                    controller.removeAllProduct(product);
+                  GetBuilder<CartController>(
+                      init: CartController(),
+                      builder: (value){
+                        return  IconButton(onPressed: (){
+                          controller.removeAllProduct(product);
+                          value.lengthData();
 
-                  }, icon: Icon(Icons.delete , color: Colors.red,))
+                        }, icon: Icon(Icons.delete , color: Colors.red,))
+                        ;
+                      }),
 
                 ],
               ),

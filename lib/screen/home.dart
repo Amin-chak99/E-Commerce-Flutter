@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:eshop/Controller/Categories_Controller.dart';
+import 'package:eshop/screen/Cart_Screen.dart';
 import 'package:eshop/screen/FournisseurPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,6 +12,7 @@ import 'cartPage.dart';
 class HomePage extends GetView<ProductController> {
   final cartController = Get.put(CartController());
   final categoriesController = Get.put(CategoriesController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class HomePage extends GetView<ProductController> {
                     animationDuration:  Duration(milliseconds: 300),
                     badgeContent: Text(value.x),
                     child: IconButton(onPressed: () {
-                      Get.to(()=> CartPage());
+                      Get.to(()=> CartScreen());
                     }, icon: Icon(Icons.shopping_cart_checkout , color: Color.fromRGBO(255, 122, 51, 10),),),
                   ),
                 );

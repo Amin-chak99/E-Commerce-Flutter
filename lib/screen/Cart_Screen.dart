@@ -32,8 +32,10 @@ class CartScreen extends StatelessWidget {
         body: Container(
             child: Column(
               children: [
-                Flexible(child: CartPage(),),
-                Flexible(child: CartTotal(),),
+                Container(child: CartPage(),),
+                Container(
+
+                  child: CartTotal(),),
 
 
               ],

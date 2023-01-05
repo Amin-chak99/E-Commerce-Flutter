@@ -6,6 +6,7 @@ class CartController extends GetxController {
   static CartController instance = Get.find();
 
   String x = "0";
+  late int Sum;
   var listproduct= {}.obs ;
 
   void AddProducts(ProductModel product) {
@@ -16,7 +17,7 @@ class CartController extends GetxController {
     }
     Get.snackbar("Produit Ajoutée", "vous avez ajoutez le produit de marque ${product.marque} au panier",
     snackPosition: SnackPosition.BOTTOM,
-      duration: Duration(seconds: 2)
+      duration: Duration(seconds: 1)
     );
 
 
@@ -40,13 +41,16 @@ class CartController extends GetxController {
     update();
 
   }
+
+
   get productSubtotal => listproduct.entries
-      .map((product) => product.key.prix * product.value)
+      .map((product) => double.parse(product.key.prix) * product.value)
       .toList();
-  get total => listproduct.entries
-      .map((product) => product.key.prix * product.value)
+  get total  => listproduct.entries
+      .map((product) => double.parse(product.key.prix) * product.value)
       .toList()
       .reduce((value, element) => value + element)
-      .toString();
+      .toStringAsFixed(3);
+
 
 }
