@@ -44,7 +44,7 @@ class CartTotal extends StatelessWidget {
           init: CartController(),
           builder: (value){
             
-            return  totale()
+            return  Obx(() => totale())
             ;
           }),
 
