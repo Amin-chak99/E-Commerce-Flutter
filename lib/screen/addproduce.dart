@@ -87,7 +87,6 @@ class _addproduceState extends State<addproduce> {
         }
       }
   );
-
   Future uploadfile() async{
     final path= 'files/${pickedFile!.name}';
     final file = File(pickedFile!.path!);
@@ -95,12 +94,6 @@ class _addproduceState extends State<addproduce> {
 
     setState(()   {
       uploadTask=ref.putFile(file);
-
-
-
-
-
-
     });
     final snapshot = await uploadTask!.whenComplete(() {});
 
@@ -140,8 +133,6 @@ class _addproduceState extends State<addproduce> {
         )
     );
   }
-
-  /// This is Main Body widget.
   Widget _mainBody() {
     return Padding(
       padding: const EdgeInsets.only(left: 20.0 , right: 20 ,top: 12.5),
@@ -182,20 +173,16 @@ class _addproduceState extends State<addproduce> {
           const SizedBox(
             height: 15.0,
           ),
-
           AppTextField(
             isCitySelected: true,
             cities: _listOfCities,
             textEditingController: _catTextEditingController,
             title: "Catégories",
             hint: "Choisir un catégorie",
-
-
           ),
           AppTextField(
 
             textEditingController: _nameProductTextEditingController,
-
             title: "Nom du Produit",
             hint: "Enter nom produit",
             isCitySelected: false,
@@ -238,13 +225,6 @@ class _addproduceState extends State<addproduce> {
              affichage().whenComplete(() {
                Navigator.push(context, MaterialPageRoute(builder: (context) => const EspaceFr()) );
              });
-
-
-
-
-
-
-
           }, child: Text("add")),
           const SizedBox(
             height: 15.0,
@@ -304,4 +284,3 @@ class User{
       prix: json['prix'],
       imgRef: json['imagename']);
 }
-
