@@ -210,22 +210,26 @@ class _addproduceState extends State<addproduce> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 15.0,
-          ),
+          const SizedBox(height: 15.0,),
           BuildProgress(),
-          const SizedBox(
-            height: 15.0,
+          const SizedBox(height: 15.0,),
+          Center(
+           child: OutlinedButton(
+              child: Text("Ajouter produit",style: TextStyle(fontSize: 16),),
+              style: OutlinedButton.styleFrom(
+                primary: Colors.orange,
+                side: BorderSide(
+                  color: Colors.orange,
+                ),
+              ),
+               onPressed:()   async {
+                 affichage().whenComplete(() {
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => const EspaceFr()) );
+                 });
+               }
+            ),
           ),
-          ElevatedButton(onPressed:() {
 
-            print(fileName);
-          }, child: Text("submit")),
-          ElevatedButton(onPressed:()   async {
-             affichage().whenComplete(() {
-               Navigator.push(context, MaterialPageRoute(builder: (context) => const EspaceFr()) );
-             });
-          }, child: Text("add")),
           const SizedBox(
             height: 15.0,
           ),

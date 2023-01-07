@@ -7,7 +7,7 @@ import '../Controller/Controller.dart';
 import '../Controller/Product_Controller.dart';
 
 Widget CardView(BuildContext context, int index , ProductController controller, CartController cartController, categoriesController)=>
-    Card(
+    Container(
         child: Container(
           margin: EdgeInsets.only(top: 10,left: 10,right: 10 ,bottom: 10),
           padding: EdgeInsets.all(20),

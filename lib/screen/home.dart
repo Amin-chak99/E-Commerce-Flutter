@@ -63,6 +63,7 @@ class HomePage extends GetView<ProductController> {
           backgroundColor:Colors.orange,
 
           child:  Column(
+
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children:<Widget>[
@@ -125,9 +126,9 @@ class HomePage extends GetView<ProductController> {
                     ],
                   ),
                 ),
-
+                SizedBox(height: 7,),
                 Text('Copyright ©2023, All Rights Reserved.',style: TextStyle(fontWeight:FontWeight.w300, fontSize: 12.0, color:Colors.black),),
-                Text('Developed by Amin Chakroun',style: TextStyle(fontWeight:FontWeight.w300, fontSize: 12.0,color: Colors.black),),
+                Text('Developed by Amin Chakroun',style: TextStyle(fontWeight:FontWeight.w300, fontSize: 12.0,color: Colors.black  ),),
               ]
           ),
 
@@ -137,12 +138,21 @@ class HomePage extends GetView<ProductController> {
            Padding(
             padding:  EdgeInsets.only(top:0),
             child: Container(
+                decoration: BoxDecoration(
+                  color:  Colors.grey.shade300,
+                  border: Border.all(
+                      width: 0.2,
+                      color: Colors.grey
+                  ),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30)),
+
+                ),
                 child: LayoutBuilder(builder: (BuildContext ,BoxConstraints) {
                   return SingleChildScrollView(
                     child: Container(
                         child: Column(children: [
                           Container (
-                            margin: EdgeInsets.symmetric (horizontal: 15),
+                            margin: EdgeInsets.symmetric (vertical:15,horizontal: 15),
                             padding: EdgeInsets.symmetric (horizontal: 15),
                             height: 50,
                             decoration: const BoxDecoration(
