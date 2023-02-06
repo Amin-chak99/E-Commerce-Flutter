@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -29,7 +30,7 @@ class CarouselLoading extends StatelessWidget {
 
             Container(
               padding: const EdgeInsets.only(right: 15),
-              child:  Badge(
+              child:  badges.Badge(
                 toAnimate: true,
                 position: BadgePosition.topEnd(top: 0),
                 animationType: BadgeAnimationType.slide ,
@@ -60,7 +61,7 @@ class CarouselLoading extends StatelessWidget {
                   height: 50,
                   width: MediaQuery.of(context).size.width*0.69,
                   child :TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: "Search here...",
                     ),
@@ -70,10 +71,10 @@ class CarouselLoading extends StatelessWidget {
               ],),),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.symmetric (
+            margin: const EdgeInsets.symmetric (
               vertical: 15,
               horizontal: 10,), // Edge Insets.symmetric
-            child: Text(
+            child: const Text(
               "Categories",
               style: TextStyle(
                 fontSize: 25,

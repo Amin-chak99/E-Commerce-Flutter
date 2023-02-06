@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=E:\aminc\telechargemants\flutter\flutter_windows_3.3.2-stableflutter\flutter
-FLUTTER_APPLICATION_PATH=E:\WorkSpace_Flutter\e_commerce
+FLUTTER_APPLICATION_PATH=E:\WorkSpace_Flutter\E-Commerce-Flutter
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build

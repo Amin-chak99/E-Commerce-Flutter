@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'ResetScreen.dart';
+
 class FournisseurPage extends StatefulWidget {
   @override
   State<FournisseurPage> createState() => _FournisseurPageState();
@@ -119,6 +121,17 @@ class _FournisseurPageState extends State<FournisseurPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      child: Text('Forgot Password?'),
+                      onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => ResetScreen()),
+                      ),
+                    )
+                  ],
                 )
 
 

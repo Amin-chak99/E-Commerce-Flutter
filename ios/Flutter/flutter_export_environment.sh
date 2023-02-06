@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=E:\aminc\telechargemants\flutter\flutter_windows_3.3.2-stableflutter\flutter"
-export "FLUTTER_APPLICATION_PATH=E:\WorkSpace_Flutter\e_commerce"
+export "FLUTTER_APPLICATION_PATH=E:\WorkSpace_Flutter\E-Commerce-Flutter"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"

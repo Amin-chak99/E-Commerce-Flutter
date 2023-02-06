@@ -41,7 +41,7 @@ dependencies:
   image_picker: ^0.8.6
   drop_down_list: ^0.0.4
   curved_navigation_bar_with_label: ^2.1.0
-  badges: ^2.0.3
+  badges:
   firebase_core:
   firebase_auth: ^4.2.2
   firebase_database:

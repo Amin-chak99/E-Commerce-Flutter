@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -43,7 +44,7 @@ class HomePage extends GetView<ProductController> {
               builder: (value){
                 return   Container(
                   padding: const EdgeInsets.only(right: 15),
-                  child:  Badge(
+                  child:  badges.Badge(
                     toAnimate: true,
                     position: BadgePosition.topEnd(top: 0),
                     animationType: BadgeAnimationType.slide ,
