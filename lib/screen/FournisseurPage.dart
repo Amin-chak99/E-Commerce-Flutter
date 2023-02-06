@@ -126,7 +126,10 @@ class _FournisseurPageState extends State<FournisseurPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
-                      child: Text('Forgot Password?'),
+                      child: Text('Forgot Password?' , style: TextStyle(
+                        color: Color.fromRGBO(255, 122, 51, 10),
+
+                      ),),
                       onPressed: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ResetScreen()),
                       ),
